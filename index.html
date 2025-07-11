@@ -1,53 +1,100 @@
-pagina web  "index.html"
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tienda Digital Gabriel</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #f4f4f4;
+      line-height: 1.6;
+    }
+
     header {
-      background: #333;
-      color: white;
-      padding: 20px;
+      background: #000;
+      padding: 40px 20px;
       text-align: center;
     }
-    .container {
-      padding: 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+
+    header h1 {
+      color: #ff2d2d;
+      font-size: 2.5em;
     }
-    .product {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .product h3 {
-      margin-top: 0;
-    }
-    .buy-btn {
-      display: inline-block;
-      margin-top: 10px;
+
+    nav {
+      background: #1a1a1a;
       padding: 10px;
-      background: #28a745;
+      text-align: center;
+    }
+
+    nav a {
+      color: #f4f4f4;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff2d2d;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .productos {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .producto {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 45, 45, 0.2);
+    }
+
+    .producto h3 {
+      color: #ff2d2d;
+    }
+
+    .btn-rojo {
+      display: inline-block;
+      background: #ff2d2d;
       color: white;
+      padding: 10px 15px;
       text-decoration: none;
       border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .btn-rojo:hover {
+      background: #e60000;
+    }
+
+    footer {
+      background: #000;
+      color: #999;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
@@ -55,21 +102,51 @@ pagina web  "index.html"
 
 <header>
   <h1>Tienda Digital Gabriel</h1>
-  <p>Productos digitales al instante</p>
+  <p>Productos digitales con entrega inmediata</p>
 </header>
 
-<div class="container">
-  <div class="product">
-    <h3>Curso de Diseño Web</h3>
-    <p>Aprende desde cero a crear páginas web.</p>
-    <a class="buy-btn" href="https://wa.me/56912345678" target="_blank">Comprar por WhatsApp</a>
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#productos">Productos</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="inicio">
+  <h2>Bienvenido a tu tienda</h2>
+  <p>Esta es tu tienda digital. Aquí podrás vender cursos, ebooks, plantillas, guías, software y mucho más. Personalízala a tu gusto y comienza a compartir tu talento con el mundo.</p>
+</section>
+
+<section id="nosotros">
+  <h2>Sobre nosotros</h2>
+  <p>Somos una tienda especializada en productos digitales, hechos con pasión y dedicación. Nuestro objetivo es ofrecerte contenido de calidad que puedas usar, aprender y aprovechar desde el primer momento.</p>
+</section>
+
+<section id="productos">
+  <h2>Nuestros productos</h2>
+  <div class="productos">
+    <div class="producto">
+      <h3>Producto 1</h3>
+      <p>Descripción breve del producto.</p>
+      <a href="#" class="btn-rojo">Próximamente</a>
+    </div>
+    <div class="producto">
+      <h3>Producto 2</h3>
+      <p>Descripción breve del producto.</p>
+      <a href="#" class="btn-rojo">Próximamente</a>
+    </div>
   </div>
-  <div class="product">
-    <h3>Pack de Plantillas Canva</h3>
-    <p>Plantillas listas para tus redes sociales.</p>
-    <a class="buy-btn" href="https://wa.me/56912345678" target="_blank">Comprar por WhatsApp</a>
-  </div>
-</div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>¿Tienes preguntas o quieres comprar? Escríbenos directamente:</p>
+  <a class="btn-rojo" href="https://wa.me/56912345678" target="_blank">Contactar por WhatsApp</a>
+</section>
+
+<footer>
+  <p>&copy; 2025 Tienda Digital Gabriel. Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>
